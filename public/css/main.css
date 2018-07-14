@@ -1,0 +1,175 @@
+html,
+body {
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+}
+
+header {
+    width: 100%;
+    height: 200px;
+
+    background-color: white;
+    position: static;
+    margin: 0;
+    padding: 0;
+}
+
+header a {
+    color: black;
+}
+
+header h1 {
+    margin: 0;
+    position: relative;
+    top: 40%;
+}
+
+#top_week ul {
+
+    position: static;
+    background-color: #ae5da1;
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+#top_week li {
+    position: relative;
+    top: 30%;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-left: 0;
+    display: inline;
+    list-style: none;
+
+}
+
+section {
+    width: 100%;
+    height: 1000px;
+    margin: 0;
+    padding: 0;
+
+}
+
+#left {
+    float: left;
+    margin-top: 30px;
+    width: 30%;
+    max-width: 300px;
+    min-width: 300px;
+    height: auto;
+
+    color: #ae5da1;
+}
+
+#left_week ul {
+    text-align: left;
+    padding: 30px;
+    margin: 0;
+
+}
+
+#left_week li {
+    padding: 10px;
+    font-weight: bold;
+    list-style: none;
+}
+
+button {
+    background: none;
+    border: none;
+    color: #ae5da1;
+}
+
+a {
+    text-decoration: none;
+}
+
+#top_week a {
+    color: white;
+}
+
+#left_week a {
+    color: #ae5da1;
+}
+
+
+
+#right {
+    position: relative;
+    left: 150px;
+    width: 60%;
+    float: left;
+    margin-top: 30px;
+    height: auto;
+    margin-right: 150px;
+}
+
+footer {
+    clear: left;
+}
+
+table.board {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-collapse: collapse;
+
+}
+
+table.board tr {
+    border-bottom: 1px solid #ccc;
+
+}
+
+table.board th {
+    font-weight: bolder;
+    padding: 10px;
+}
+
+table.board td {
+    padding: 8px;
+}
+
+.page {
+    width: 60%;
+    margin-left: 20%;
+    text-align: center;
+}
+
+.page button {
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+.page ul {
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+
+}
+
+.page ul li {
+    list-style: none;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#write {
+    border: 1px solid #ccc;
+    background-color: ae5da1;
+    float: right;
+}
+
+.board_search {
+    text-align: right;
+}

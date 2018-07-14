@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>회원가입</title>
+    <style>
+        label {
+            float: left;
+            width: 100px;
+        }
+
+    </style>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <img src="img/signup.png" style="margin-left: auto;margin-right: auto; width: 400px; display: block; vertical-align: 10px"><br><br>
+    <form method="post" action="/signupcheck">
+        <div class="form-group" style="width: 400px; margin: auto;">
+            <div>
+               <form action="/doublecheck" method="POST">
+                <label for="newid">ID</label>
+                <input class="form-control" id="newid" name="newid" type="text" placeholder="6자 이상" style="width:200px; float:left;">
+                <button type="button" class="btn btn-success" style="margin-left: 10px;" onclick="location.href='/double'
+                }">중복확인</button><br>
+   
+                </form>
+            </div>
+            <br>
+            <div>
+                <label for="newnickname">닉네임</label>
+                <input class="form-control" id="newnickname" name="newnickname" type="text" placeholder="3자 이상" style="width:200px">
+            </div>
+            <br>
+            <div>
+                <label for="newemail">Email</label>
+                <input class="form-control" id="newemail" name="newemail" type="email" placeholder="abc@abc.kr" style="width:200px">
+            </div>
+            <br>
+            <div>
+                <label for="newpw">비밀번호</label>
+                <input class="form-control" id="newid" name="newpw" type="password" placeholder="최소 8자 이상" style="width: 200px">
+            </div>
+            <br>
+            <div>
+                <label for="checkpw">비밀번호 확인</label>
+                <input class="form-control" id="checkpw" name="checkpw" type="password" style="width: 200px">
+            </div>
+            <br>
+            <div>
+                <label for="newname">이름</label>
+                <input class="form-control" id="newname" name="newname" type="text" style="width: 200px">
+            </div>
+            <br>
+            <div>
+                <label for="newpn">휴대폰 번호</label>
+                <input class="form-control" id="newpn" name="newpn" type="text" style="width: 200px;">
+            </div>
+            <br>
+            <div>
+                <label for="newbd">생일</label>
+                <input class="form-control" id="newbd" name="newbd" type="date" style="width: 200px"><br>
+            </div>
+            <br>
+            <div style="float: right; margin-right: 20px;">
+                <button type="button" class="btn btn-success" onclick="location.href='/'">취소</button>
+                <input class="btn btn-success" type="submit" value="확인">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

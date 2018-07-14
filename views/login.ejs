@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>로그인 페이지</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+
+<body style>
+    <img src="img/logo.png" style="margin-left: auto;margin-right: auto; width: 360px; display: block"><br><br>
+    <form method="POST" action="/logincheck">
+        <div class="form-group" style="width: 350px; margin: auto">
+            <label for="InputID">ID</label>
+            <input type="text" class="form-control" name="id" placeholder="Enter ID"></div>
+        <div class="form-group" style="width: 350px; margin: auto">
+            <label for="InputPW">Password</label>
+            <input type="password" class="form-control" name="pw" placeholder="password"><br></div>
+        <center>
+            <input class="btn btn-success" type="submit" value="Log in" style="width: 174px">
+            <button type="button" class="btn btn-success" onclick="location.href='./signup'" style="width: 174px">Sign up</button>
+        </center>
+    </form>
+</body>
+
+</html>

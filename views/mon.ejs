@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        WWWWEEK</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="/main">
+                WELCOME!</a>
+        </h1>
+    </header>
+
+    <nav id="top_week">
+        <ul>
+            <li><a href="/<%=week[0].day%>">Mon.</a></li>
+            <li><a href="/<%=week[1].day%>">Tue.</a></li>
+            <li><a href="/<%=week[2].day%>">Wed.</a></li>
+            <li><a href="/<%=week[3].day%>">Thu.</a></li>
+            <li><a href="/<%=week[4].day%>">Fri.</a></li>
+            <li><a href="/<%=week[5].day%>">Sat.</a></li>
+            <li><a href="/<%=week[6].day%>">Sun.</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div id="left">
+            <img src="./img/suzy.jpg" width="200px">
+            <p>
+                <%=id%>님 지금 로그인~!<br>
+                    <button>Mypage</button> <button type="button" onclick="location.href='/logout'">Logout</button>
+            </p>
+            <nav id="left_week">
+
+                <ul>
+                    <h1><a href="/board">TODAY is..</a></h1>
+                    <li><a href="/<%=week[0].day%>">Monday</a></li>
+                    <li><a href="/<%=week[1].day%>">Tuesday</a></li>
+                    <li><a href="/<%=week[2].day%>">Wednesday</a></li>
+                    <li><a href="/<%=week[3].day%>">Thursday</a></li>
+                    <li><a href="/<%=week[4].day%>">Friday</a></li>
+                    <li><a href="/<%=week[5].day%>">Saturday</a></li>
+                    <li><a href="/<%=week[6].day%>">Sunday</a></li>
+
+                </ul>
+            </nav>
+            <form method="post" action="/search">
+
+                <input type="search" name="search">
+                <button type="submit">SEARCH</button>
+            </form>
+        </div>
+        <div id="right">
+            <input type="hidden" name="pageId" value="mon">;
+            <h1>TODAY IS MONDAY!</h1>
+            <div class="board_search">
+                <input type="radio" name="find" value="1" checked>이름
+                <input type="radio" name="find" value="2">제목
+                <input type="radio" name="find" value="3">내용
+                <input type="text">
+                <button>검색</button>
+            </div>
+
+            <table class="board">
+                <tbody>
+                    <tr>
+                        <th>번호</th>
+                        <th style="width: 70px;">카테고리</th>
+                        <th style="width: 20%;">제목</th>
+                        <th>작성자</th>
+                        <th>날짜</th>
+                        <th>조회수</th>
+                    </tr>
+                    <%for(var i=0;i<rows.length;i++){%>
+                        <tr>
+
+                            <td>
+                                <%=rows.length-i%>
+                            </td>
+                            <td>
+                                <a href="/<%=rows[i].category%>">
+                                    <%=rows[i].category%>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/<%=rows[i].category%>/<%=rows[i].id%>">
+                                    <%=rows[i].title%>
+                                </a>
+                            </td>
+                            <td>
+                                <%=rows[i].writer%>
+                            </td>
+                            <td>
+                                <%=rows[i].wdate%>
+                            </td>
+                            <td>
+                                <%=rows[i].viewcount%>
+                            </td>
+                        </tr>
+                        <%}%>
+
+                </tbody>
+            </table>
+            <div class="page">
+                <button>처음</button>
+                <button>이전</button>
+                <ul>
+                    <%for(var i=0; i<cnt[0].cnt/10;i++){%>
+                        <li>
+                            <a href="/main<%=i+1%>">
+                                <%=i+1%>
+                            </a>
+                        </li>
+                        <%}%>
+                </ul>
+
+                <button>다음</button>
+                <button>마지막</button>
+            </div>
+            <button id="write" type="submit" onclick="location='/write'">글쓰기</button>
+        </div>
+        </div>
+    </section>
+    <footer>
+        마지막이지롱
+    </footer>
+</body>
+
+</html>

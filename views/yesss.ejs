@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>블로그</title>
+    <link rel="stylesheet" type="text/css" href="css/board.css">
+</head>
+<style>
+    header {
+        width: 100%;
+        text-align: center;
+        height: 15vh;
+        font-size: 4em;
+        background-color: pink;
+    }
+
+    #c1 {
+        width: 100%;
+        text-align: center;
+
+    }
+
+    #c2 {
+
+        width: 20%;
+        text-align: center;
+        height: 70vh;
+        background: pink;
+        float: left;
+    }
+
+    .cont {
+        padding: 10px;
+    }
+
+    footer {
+        clear: left;
+    }
+
+</style>
+
+<body>
+    <header>
+        <%=id%>님으 ㅣ 블로그</header>
+    <nav id="c1">카테고리 12345678910</nav>
+    <nav id="c2">
+        <div class="cont">
+            <div id=profile>
+                <img src="http://static.ebs.co.kr/images/ebs/WAS-HOME/portal/upload/img/programinfo/person/per/1242723628671_jQsezgDpQe.jpg" width="80%">
+            </div>
+            <div>
+                <button type="button" onclick="location.href='/logout'">logout</button>
+            </div>
+        </div>
+    </nav>
+    <section>
+
+        <body>
+            <div class="container">
+                <div class="search">
+                    <input type="radio" name="find" value="1" checked>이름
+                    <input type="radio" name="find" value="2">제목
+                    <input type="radio" name="find" value="3">내용
+                    <input type="text">
+                    <button>검색</button>
+                </div>
+                <table class="board">
+                    <tbody>
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>작성자</th>
+                            <th>날짜</th>
+                            <th>조회수</th>
+                        </tr>
+                        <%for(var i=0;i<rows.length;i++){%>
+                            <tr>
+                                <td>
+                                    <%=rows[i].id%>
+                                </td>
+                                <td>
+                                    <a href="/look<%=rows[i].id%>">
+                                        <%=rows[i].title%>
+                                    </a>
+
+                                </td>
+                                <td>
+                                    <%=rows[i].writer%>
+                                </td>
+                                <td>
+                                    <%=rows[i].wdate%>
+                                </td>
+                                <td>
+                                    <%=rows[i].viewcount%>
+                                </td>
+                            </tr>
+                            <%}%>
+                    </tbody>
+                </table>
+                <div class="page">
+                    <button>처음</button>
+                    <button>이전</button>
+                    <ul>
+                        <%for(var i=0; i<cnt[0].cnt/10;i++){%>
+                            <li>
+                                <a href="/main<%=i+1%>">
+                                    <%=i+1%>
+                                </a>
+                            </li>
+                            <%}%>
+                    </ul>
+
+                    <button>다음</button>
+                    <button>마지막</button>
+                </div>
+                <button id="write" type="button" onclick="location='/write'">글쓰기</button>
+            </div>
+        </body>
+
+    </section>
+    <footer>마지막이지롱</footer>
+</body>
+
+</html>

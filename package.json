@@ -1,0 +1,17 @@
+{
+  "name": "server2",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "*",
+    "ejs-lint": "^0.3.0",
+    "express": "3.2.6",
+    "express-mysql-session": "^2.0.0",
+    "express-session": "^1.15.6",
+    "mysql": "^2.15.0"
+  }
+}
